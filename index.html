@@ -1,0 +1,21 @@
+<html ng-app="ticTacToeApp">
+<head>
+	<title>Levani's Tic Tac Toe Game</title>
+	 <link rel="stylesheet" type="text/css" href="stylesheet.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.0-beta.16/angular.js"></script>
+	<script src="app.js"></script>
+</head>
+<body>
+	<div class="container">
+		<div class="boardArea" ng-controller="appControler" ng-model="repeatedCells">
+			<div class="gameBoard" ng-repeat="r in repeatedCells">
+				<div class="cells" ng-click="playerOne(r)"
+                ng-class="{xclass: r.idNum =='X'}" ng-click="playerTwo(r)" ng-class="{oclass: r.idNum =='O'">
+                <!-- {{r}} -->
+				</div>
+			</div>
+		</div>
+	</div>
+ {{testString}}
+</body>
+</html>
