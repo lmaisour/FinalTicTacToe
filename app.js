@@ -35,56 +35,76 @@ ticTacToeApp.controller('appControler', function ($scope) {
 		console.log('It changed!');
 	});
 
-	$scope.playerOne = function(thisCell) {
-		console.log("Cell was: " + thisCell.status) ;
-		thisCell.status = "X" ;
-		console.log("Cell is now: " + thisCell.status) ;
-	};
+	$scope.mainFunction = function(cell) {
+		var statusX = false;
+		var statusO = false;
 
-	$scope.playerTwo = function(thisCell) {
-		console.log("Cell was: " + thisCell.status);
-		thisCell.status = "Y";
-		console.log("Cell is now: " + thisCell.status);
-	};	
+		++ $scope.count;
+		console.log($scope.count);
+		console.log(cell);
+
+		if ($scope.count%2 !== 0) {
+			cell.statusX = true;
+			$scope.playerOne.push(cell);
+			console.log($scope.playerOne);
+		}
+		else {
+			cell.statusO = true;
+			$scope.playerTwo.push(cell);
+			console.log($scope.playerTwo);
+		}
+	}
+
+	// $scope.playerOne = function(thisCell) {
+	// 	console.log("Cell was: " + thisCell.status) ;
+	// 	thisCell.status = "X" ;
+	// 	console.log("Cell is now: " + thisCell.status) ;
+	// };
+
+	// $scope.playerTwo = function(thisCell) {
+	// 	console.log("Cell was: " + thisCell.status);
+	// 	thisCell.status = "Y";
+	// 	console.log("Cell is now: " + thisCell.status);
+	// };	
 
 	var GameStrategy = function () {
 
 		if (cells[0] == 'x' && cells[1] =='x' & cells[2] == 'x' ) {
-			$scope.xwins();
+			$scope.Xplayer();
 		} else if (cells[3] == 'x' && cells[4] =='x' & cells[5] == 'x') {
-			$scope.xwins();
+			$scope.Xplayer();
 		} else if (cells[6] == 'x' && cells[7] =='x' & cells[8] == 'x') {
-			$scope.xwins();
+			$scope.Xplayer();
 		} else if (cells[0] == 'x' && cells[4] =='x' & cells[8] == 'x') {
-			$scope.xwins();
+			$scope.Xplayer();
 		}else if (cells[2] == 'x' && cells[4] =='x' & cells[6] == 'x') {
-			$scope.xwins();
+			$scope.Xplayer();
 		}  else if (cells[0] == 'x' && cells[3] =='x' & cells[6] == 'x') {
-			$scope.xwins();
+			$scope.Xplayer();
 		}  else if (cells[1] == 'x' && cells[4] =='x' & cells[7] == 'x') {
-			$scope.xwins();
+			$scope.Xplayer();
 		}  else if (cells[2] == 'x' && cells[5] =='x' & cells[8] == 'x') {
-			$scope.xwins();
+			$scope.Xplayer();
 		}
 
 
 
 		if (cells[0] == 'o' && cells[1] =='o' & cells[2] == 'o' ) {
-			$scope.owins();
+			$scope.Oplayer();
 		} else if (cells[3] == 'o' && cells[4] =='o' & cells[5] == 'o') {
-			$scope.owins();
+			$scope.Oplayer();
 		} else if (cells[6] == 'o' && cells[7] =='o' & cells[8] == 'o') {
-			$scope.owins();
+			$scope.Oplayer();
 		} else if (cells[0] == 'o' && cells[4] =='o' & cells[8] == 'o') {
-			$scope.owins();
+			$scope.Oplayer();
 		}else if (cells[2] == 'o' && cells[4] =='o' & cells[6] == 'o') {
-			$scope.owins();
+			$scope.Oplayer();
 		} else if (cells[0] == 'o' && cells[3] =='o' & cells[6] == 'o') {
-			$scope.owins();
+			$scope.Oplayer();
 		}  else if (cells[1] == 'o' && cells[4] =='o' & cells[7] == 'o') {
-			$scope.owins();
+			$scope.Oplayer();
 		}  else if (cells[2] == 'o' && cells[5] =='o' & cells[8] == 'o') {
-			$scope.owins();
+			$scope.Oplayer();
 		}
 	}
 
