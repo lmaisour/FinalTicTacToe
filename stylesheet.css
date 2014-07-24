@@ -1,0 +1,42 @@
+/* --------------- GENERAL ------------------- */
+
+body {
+
+
+}
+/* --------------- GAME BOARD ------------ */
+
+.container {
+	height: 0 auto;
+	width: 0 auto;
+
+}
+.boardArea /*thebox*/{
+	width: 500px;
+	height: 468px;
+
+}
+.gameBoard {
+
+}
+.cells /*allcellsalways*/{
+	width: 150px;
+	height: 150px;
+	display: inline-block;
+    float: left;
+    border: 1px solid black;
+    border-radius: 1px;
+    margin:-1px;
+}
+
+.xclass {
+	background-color: red ;
+}
+
+.oclass {
+	background-color: blue ;
+}
+
+.blankclass {
+	background-color: gray ;
+}
