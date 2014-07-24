@@ -1,7 +1,7 @@
 /* --------------- GENERAL ------------------- */
 
 body {
-  background-color:#4B1431;
+  background-color:#CCEBE6;
   font-family: 'Lato', sans-serif;
 }
 header {
@@ -15,7 +15,7 @@ header {
   text-align: center;
   font-size: 48px;
   position:absolute;
-  top:13%;
+  top:15%;
   left:50%;
   margin:-100px 0 0 -157px;
   padding-top: -5px;
@@ -52,13 +52,16 @@ header {
 }
 
 .Xplayer {
-	background-color: red ;
+	background-color: #FFDC00 ;
+	pointer-events: none;
 }
 
 .Oplayer {
-	background-color: blue ;
+	background-color: #F97207 ;
+	pointer-events: none;
 }
 
-.blankclass {
-	background-color: gray ;
+.hide {
+	background-color: white;
 }
+
