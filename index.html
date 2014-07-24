@@ -8,9 +8,8 @@
 <body>
 	<div class="container">
 		<div class="boardArea" ng-controller="appControler" ng-model="repeatedCells">
-			<div class="gameBoard" ng-repeat="r in repeatedCells">
-				<div class="cells" ng-click="playerOne(r)"
-                ng-class="{xclass: r.idNum =='X'}" ng-click="playerTwo(r)" ng-class="{oclass: r.idNum =='O'">
+			<div class="gameBoard" ng-repeat="cell in repeatedCells">
+				<div class="cells" ng-click="mainFunction(cell)" ng-click="mainFunction(cell)" ng-class="{'Xplayer': cell.statusX, 'Oplayer': cell.statusO}">
                 <!-- {{r}} -->
 				</div>
 			</div>
