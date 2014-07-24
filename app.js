@@ -7,11 +7,16 @@ ticTacToeApp.controller('appControler', function ($scope) {
 	// $scope.firebaserepeatedCells =
 		// $firebase(new Firebase("https://levani-ttt.firebaseIO.com" + '/firebaserepeatedCells/'));
 		
+
+
+		// create players and cell count to zero //
 		$scope.playerOne = [];
 		$scope.playerTwo = [];
 		$scope.count = 0;
 
 
+
+		//create array to be used with ng-repeat for the 3x3 grid. 9 items total //
 		$scope.repeatedCells = [
 		{idNum: 0},
 		{idNum: 1},
@@ -23,25 +28,34 @@ ticTacToeApp.controller('appControler', function ($scope) {
 		{idNum: 7},
 		{idNum: 8},
 		];
+
+
+		// define winning combinations // 
 		$scope.winners = [[0,1,2],[3,4,5],[6,7,8],[0,3,6], [1,4,7],[2,5,8],[0,4,8],[2,4,6]],
 
+
+		// just a test to see if the index file is reaching the js file //
 		$scope.testJS = function() {
 			console.log('Correctly accessing JS function.') ;
 		};
 
 	// $scope.firebaserepeatedCells.$bind($scope, "repeatedCells");
 
+	
+	// if angular has no problems and the array identifies stuff is happening to it //
 	$scope.$watch('repeatedCells', function() {
 		console.log('It changed!');
 	});
 
-	$scope.mainFunction = function(cell) {
+
+	//determind the turns -- assign x to player one, o to player two. if the count doesnt equal
+	// to 1, then it is player one because of the %2 .. this shows the remained of 0/2 //
+	$scope.playerTurns = function(cell) {
 		var statusX = false;
 		var statusO = false;
 
 		++ $scope.count;
-		console.log($scope.count);
-		console.log(cell);
+
 
 		if ($scope.count%2 !== 0) {
 			cell.statusX = true;
@@ -54,18 +68,6 @@ ticTacToeApp.controller('appControler', function ($scope) {
 			console.log($scope.playerTwo);
 		}
 	}
-
-	// $scope.playerOne = function(thisCell) {
-	// 	console.log("Cell was: " + thisCell.status) ;
-	// 	thisCell.status = "X" ;
-	// 	console.log("Cell is now: " + thisCell.status) ;
-	// };
-
-	// $scope.playerTwo = function(thisCell) {
-	// 	console.log("Cell was: " + thisCell.status);
-	// 	thisCell.status = "Y";
-	// 	console.log("Cell is now: " + thisCell.status);
-	// };	
 
 	var GameStrategy = function () {
 
