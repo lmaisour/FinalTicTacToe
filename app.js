@@ -71,42 +71,43 @@ ticTacToeApp.controller('appControler', function ($scope) {
 
 	var GameStrategy = function () {
 
-		if (cells[0] == 'x' && cells[1] =='x' & cells[2] == 'x' ) {
-			$scope.Xplayer();
-		} else if (cells[3] == 'x' && cells[4] =='x' & cells[5] == 'x') {
-			$scope.Xplayer();
-		} else if (cells[6] == 'x' && cells[7] =='x' & cells[8] == 'x') {
-			$scope.Xplayer();
-		} else if (cells[0] == 'x' && cells[4] =='x' & cells[8] == 'x') {
-			$scope.Xplayer();
-		}else if (cells[2] == 'x' && cells[4] =='x' & cells[6] == 'x') {
-			$scope.Xplayer();
-		}  else if (cells[0] == 'x' && cells[3] =='x' & cells[6] == 'x') {
-			$scope.Xplayer();
-		}  else if (cells[1] == 'x' && cells[4] =='x' & cells[7] == 'x') {
-			$scope.Xplayer();
-		}  else if (cells[2] == 'x' && cells[5] =='x' & cells[8] == 'x') {
-			$scope.Xplayer();
+		if (cells[0] == 'cell.statusX' && cells[1] =='cell.statusX' & cells[2] == 'cell.statusX' ) {
+			$scope.playerOne();
+		} else if (cells[3] == 'cell.statusX' && cells[4] =='cell.statusX' & cells[5] == 'cell.statusX') {
+			$scope.playerOne();
+		} else if (cells[6] == 'cell.statusX' && cells[7] =='cell.statusX' & cells[8] == 'cell.statusX') {
+			$scope.playerOne();
+		} else if (cells[0] == 'cell.statusX' && cells[4] =='cell.statusX' & cells[8] == 'cell.statusX') {
+			$scope.playerOne();
+		}else if (cells[2] == 'cell.statusX' && cells[4] =='cell.statusX' & cells[6] == 'cell.statusX') {
+			$scope.playerOne();
+		}  else if (cells[0] == 'cell.statusX' && cells[3] =='cell.statusX' & cells[6] == 'cell.statusX') {
+			$scope.playerOne();
+		}  else if (cells[1] == 'cell.statusX' && cells[4] =='cell.statusX' & cells[7] == 'cell.statusX') {
+			$scope.playerOne();
+		}  else if (cells[2] == 'cell.statusX' && cells[5] =='cell.statusX' & cells[8] == 'cell.statusX') {
+			$scope.playerOne();
 		}
 
 
 
-		if (cells[0] == 'o' && cells[1] =='o' & cells[2] == 'o' ) {
-			$scope.Oplayer();
-		} else if (cells[3] == 'o' && cells[4] =='o' & cells[5] == 'o') {
-			$scope.Oplayer();
-		} else if (cells[6] == 'o' && cells[7] =='o' & cells[8] == 'o') {
-			$scope.Oplayer();
-		} else if (cells[0] == 'o' && cells[4] =='o' & cells[8] == 'o') {
-			$scope.Oplayer();
-		}else if (cells[2] == 'o' && cells[4] =='o' & cells[6] == 'o') {
-			$scope.Oplayer();
-		} else if (cells[0] == 'o' && cells[3] =='o' & cells[6] == 'o') {
-			$scope.Oplayer();
-		}  else if (cells[1] == 'o' && cells[4] =='o' & cells[7] == 'o') {
-			$scope.Oplayer();
-		}  else if (cells[2] == 'o' && cells[5] =='o' & cells[8] == 'o') {
-			$scope.Oplayer();
+		if (cells[0] == 'cell.statusO' && cells[1] =='cell.statusO' & cells[2] == 'cell.statusO' ) {
+			$sccell.statusOpe.playerTwcell.statusO();
+			alert('cell.statusO wins!');
+		} else if (cells[3] == 'cell.statusO' && cells[4] =='cell.statusO' & cells[5] == 'cell.statusO') {
+			$sccell.statusOpe.playerTwcell.statusO();
+		} else if (cells[6] == 'cell.statusO' && cells[7] =='cell.statusO' & cells[8] == 'cell.statusO') {
+			$sccell.statusOpe.playerTwcell.statusO();
+		} else if (cells[0] == 'cell.statusO' && cells[4] =='cell.statusO' & cells[8] == 'cell.statusO') {
+			$sccell.statusOpe.playerTwcell.statusO();
+		}else if (cells[2] == 'cell.statusO' && cells[4] =='cell.statusO' & cells[6] == 'cell.statusO') {
+			$sccell.statusOpe.playerTwcell.statusO();
+		} else if (cells[0] == 'cell.statusO' && cells[3] =='cell.statusO' & cells[6] == 'cell.statusO') {
+			$sccell.statusOpe.playerTwcell.statusO();
+		}  else if (cells[1] == 'cell.statusO' && cells[4] =='cell.statusO' & cells[7] == 'cell.statusO') {
+			$sccell.statusOpe.playerTwcell.statusO();
+		}  else if (cells[2] == 'cell.statusO' && cells[5] =='cell.statusO' & cells[8] == 'cell.statusO') {
+			$scope.playerTwo();
 		}
 	}
 
