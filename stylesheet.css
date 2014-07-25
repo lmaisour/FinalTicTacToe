@@ -52,18 +52,18 @@ header {
 }
 
 .Xplayer {
-	background:url(http://www.clker.com/cliparts/n/m/s/y/W/W/dezzit-close-th.png);
+	background:url(images/ttt-x.jpg);
 	background-repeat: no-repeat;
 	pointer-events: none;
 }
 
 .Oplayer {
-	background:url(http://www.clker.com/cliparts/c/4/0/6/13140605771425716395o-th.png);
+	background:url(images/ttt-o.jpg);
 	background-repeat: no-repeat;
 	pointer-events: none;
 }
 
-.hide {
+hide.exited {
 	background-color: white;
 }
 
