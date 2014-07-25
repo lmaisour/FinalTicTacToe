@@ -88,27 +88,29 @@ ticTacToeApp.controller('appControler', function ($scope) {
 		}  else if (cells[2] == 'cell.statusX' && cells[5] =='cell.statusX' & cells[8] == 'cell.statusX') {
 			$scope.playerOne();
 		}
-
+			console.log('x wins');
+		 // should i create alert here?
 
 
 		if (cells[0] == 'cell.statusO' && cells[1] =='cell.statusO' & cells[2] == 'cell.statusO' ) {
-			$sccell.statusOpe.playerTwcell.statusO();
+			$scope.playerTwo();
 			alert('cell.statusO wins!');
 		} else if (cells[3] == 'cell.statusO' && cells[4] =='cell.statusO' & cells[5] == 'cell.statusO') {
-			$sccell.statusOpe.playerTwcell.statusO();
+			$scope.playerTwo();
 		} else if (cells[6] == 'cell.statusO' && cells[7] =='cell.statusO' & cells[8] == 'cell.statusO') {
-			$sccell.statusOpe.playerTwcell.statusO();
+			$scope.playerTwo();
 		} else if (cells[0] == 'cell.statusO' && cells[4] =='cell.statusO' & cells[8] == 'cell.statusO') {
-			$sccell.statusOpe.playerTwcell.statusO();
+			$scope.playerTwo();
 		}else if (cells[2] == 'cell.statusO' && cells[4] =='cell.statusO' & cells[6] == 'cell.statusO') {
-			$sccell.statusOpe.playerTwcell.statusO();
+			$scope.playerTwo();
 		} else if (cells[0] == 'cell.statusO' && cells[3] =='cell.statusO' & cells[6] == 'cell.statusO') {
-			$sccell.statusOpe.playerTwcell.statusO();
+			$scope.playerTwo();
 		}  else if (cells[1] == 'cell.statusO' && cells[4] =='cell.statusO' & cells[7] == 'cell.statusO') {
-			$sccell.statusOpe.playerTwcell.statusO();
+			$scope.playerTwo();
 		}  else if (cells[2] == 'cell.statusO' && cells[5] =='cell.statusO' & cells[8] == 'cell.statusO') {
 			$scope.playerTwo();
 		}
+			console.log('o wins');
 	}
 
 
