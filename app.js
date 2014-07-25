@@ -18,15 +18,15 @@ ticTacToeApp.controller('appControler', function ($scope) {
 
 		//create array to be used with ng-repeat for the 3x3 grid. 9 items total //
 		$scope.repeatedCells = [
-		{idNum: 0},
-		{idNum: 1},
-		{idNum: 2},
-		{idNum: 3},
-		{idNum: 4},
-		{idNum: 5},
-		{idNum: 6},
-		{idNum: 7},
-		{idNum: 8},
+		{cells: 0},
+		{cells: 1},
+		{cells: 2},
+		{cells: 3},
+		{cells: 4},
+		{cells: 5},
+		{cells: 6},
+		{cells: 7},
+		{cells: 8},
 		];
 
 
