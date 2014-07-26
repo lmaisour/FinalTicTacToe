@@ -10,8 +10,6 @@ ticTacToeApp.controller('appControler', function ($scope) {
 
 
 		// create players and cell count to zero //
-		$scope.playerOne = [];
-		$scope.playerTwo = [];
 		$scope.count = 0;
 
 
@@ -44,73 +42,78 @@ ticTacToeApp.controller('appControler', function ($scope) {
 	
 	// if angular has no problems and the array identifies stuff is happening to it //
 	$scope.$watch('repeatedCells', function() {
-		console.log('It changed!');
+		console.log('It worked!');
 	});
 
 
 	//determind the turns -- assign x to player one, o to player two. if the count doesnt equal
 	// to 1, then it is player one because of the %2 .. this shows the remained of 0/2 //
 	$scope.playerTurns = function(cell) {
-		var statusX = false;
-		var statusO = false;
+
 
 		++ $scope.count;
 
 
 		if ($scope.count%2 !== 0) {
-			cell.statusX = true;
-			$scope.playerOne.push(cell);
 			console.log($scope.playerOne);
+			cell.cells = 'x';
 		}
 		else {
-			cell.statusO = true;
-			$scope.playerTwo.push(cell);
 			console.log($scope.playerTwo);
+			cell.cells = 'o';
 		}
+
+		gameStrategy();
 	}
 
-	var GameStrategy = function () {
+	// create function to display winner in a window.alert ?? // 
 
-		if (cells[0] == 'cell.statusX' && cells[1] =='cell.statusX' & cells[2] == 'cell.statusX' ) {
-			$scope.playerOne();
-		} else if (cells[3] == 'cell.statusX' && cells[4] =='cell.statusX' & cells[5] == 'cell.statusX') {
-			$scope.playerOne();
-		} else if (cells[6] == 'cell.statusX' && cells[7] =='cell.statusX' & cells[8] == 'cell.statusX') {
-			$scope.playerOne();
-		} else if (cells[0] == 'cell.statusX' && cells[4] =='cell.statusX' & cells[8] == 'cell.statusX') {
-			$scope.playerOne();
-		}else if (cells[2] == 'cell.statusX' && cells[4] =='cell.statusX' & cells[6] == 'cell.statusX') {
-			$scope.playerOne();
-		}  else if (cells[0] == 'cell.statusX' && cells[3] =='cell.statusX' & cells[6] == 'cell.statusX') {
-			$scope.playerOne();
-		}  else if (cells[1] == 'cell.statusX' && cells[4] =='cell.statusX' & cells[7] == 'cell.statusX') {
-			$scope.playerOne();
-		}  else if (cells[2] == 'cell.statusX' && cells[5] =='cell.statusX' & cells[8] == 'cell.statusX') {
-			$scope.playerOne();
+	var gameFinished = function (winUser){
+		alert(winUser +' has won!');
+	}
+
+
+	var gameStrategy = function () {
+
+		if ($scope.repeatedCells[0].cells == 'x' && $scope.repeatedCells[1].cells =='x' && $scope.repeatedCells[2].cells == 'x' ) {
+			gameFinished('x');
+		} 	else if ($scope.repeatedCells[3].cells == 'x' && $scope.repeatedCells[4].cells =='x' && $scope.repeatedCells[5].cells == 'x') {
+			$scope.gameFinished();
+		}	 else if ($scope.repeatedCells[6].cells == 'x' && $scope.repeatedCells[7].cells =='x' && $scope.repeatedCells[8].cells == 'x') {
+			gameFinished('x');
+		}	 else if ($scope.repeatedCells[0].cells == 'x' && $scope.repeatedCells[4].cells =='x' && $scope.repeatedCells[8].cells == 'x') {
+			gameFinished('x');
+		}	else if ($scope.repeatedCells[2].cells == 'x' && $scope.repeatedCells[4].cells =='x' && $scope.repeatedCells[6].cells == 'x') {
+			gameFinished('x');
+		}  else if ($scope.repeatedCells[0].cells == 'x' && $scope.repeatedCells[3].cells =='x' && $scope.repeatedCells[6].cells == 'x') {
+			gameFinished('x');
+		}  else if ($scope.repeatedCells[1].cells == 'x' && $scope.repeatedCells[4].cells =='x' && $scope.repeatedCells[7].cells == 'x') {
+			$scope.gameFinished();
+		}  else if ($scope.repeatedCells[2].cells == 'x' && $scope.repeatedCells[5].cells =='x' && $scope.repeatedCells[8].cells == 'x') {
+			gameFinished('x');
 		}
-			console.log('x wins');
-		 // should i create alert here?
+		
+	
 
 
-		if (cells[0] == 'cell.statusO' && cells[1] =='cell.statusO' & cells[2] == 'cell.statusO' ) {
-			$scope.playerTwo();
-			alert('cell.statusO wins!');
-		} else if (cells[3] == 'cell.statusO' && cells[4] =='cell.statusO' & cells[5] == 'cell.statusO') {
-			$scope.playerTwo();
-		} else if (cells[6] == 'cell.statusO' && cells[7] =='cell.statusO' & cells[8] == 'cell.statusO') {
-			$scope.playerTwo();
-		} else if (cells[0] == 'cell.statusO' && cells[4] =='cell.statusO' & cells[8] == 'cell.statusO') {
-			$scope.playerTwo();
-		}else if (cells[2] == 'cell.statusO' && cells[4] =='cell.statusO' & cells[6] == 'cell.statusO') {
-			$scope.playerTwo();
-		} else if (cells[0] == 'cell.statusO' && cells[3] =='cell.statusO' & cells[6] == 'cell.statusO') {
-			$scope.playerTwo();
-		}  else if (cells[1] == 'cell.statusO' && cells[4] =='cell.statusO' & cells[7] == 'cell.statusO') {
-			$scope.playerTwo();
-		}  else if (cells[2] == 'cell.statusO' && cells[5] =='cell.statusO' & cells[8] == 'cell.statusO') {
-			$scope.playerTwo();
+		if ($scope.repeatedCells[0].cells == 'o' && $scope.repeatedCells[1].cells =='o' && $scope.repeatedCells[2].cells == 'o' ) {
+			gameFinished('o');
+		} 	else if ($scope.repeatedCells[3].cells == 'o' && $scope.repeatedCells[4].cells =='o' && $scope.repeatedCells[5].cells == 'o') {
+			gameFinished('o');
+		}	 else if ($scope.repeatedCells[6].cells == 'o' && $scope.repeatedCells[7].cells =='o' && $scope.repeatedCells[8].cells == 'o') {
+			gameFinished('o');
+		} 	else if ($scope.repeatedCells[0].cells == 'o' && $scope.repeatedCells[4].cells =='o' && $scope.repeatedCells[8].cells == 'o') {
+			gameFinished('o');
+		}	else if ($scope.repeatedCells[2].cells == 'o' && $scope.repeatedCells[4].cells =='o' && $scope.repeatedCells[6].cells == 'o') {
+			gameFinished('o');
+		} 	else if ($scope.repeatedCells[0].cells == 'o' && $scope.repeatedCells[3].cells =='o' && $scope.repeatedCells[6].cells == 'o') {
+			gameFinished('o');
+		} 	 else if ($scope.repeatedCells[1].cells == 'o' && $scope.repeatedCells[4].cells =='o' && $scope.repeatedCells[7].cells == 'o') {
+			gameFinished('o');
+		} 	 else if ($scope.repeatedCells[2].cells == 'o' && $scope.repeatedCells[5].cells =='o' && $scope.repeatedCells[8].cells == 'o') {
+			gameFinished('o');
 		}
-			console.log('o wins');
+		
 	}
 
 
