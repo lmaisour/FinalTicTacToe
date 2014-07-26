@@ -63,7 +63,8 @@ header {
 	pointer-events: none;
 }
 
-hide.exited {
-	background-color: white;
+.hover {
+  background-color: #FFFCD3;
 }
+
 
