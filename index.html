@@ -18,8 +18,8 @@
 	<div class="container">
 		<div class="boardArea" ng-controller="appControler" ng-model="repeatedCells">
 			<div class="gameBoard" ng-repeat="cell in repeatedCells">
-				<div class="cells" ng-click="playerTurns(cell)" ng-class="{'Xplayer': cell.statusX, 'Oplayer': cell.statusO}">
-					<span class="hide" ng-hide="exited"></span>
+				<div class="cells" ng-click="playerTurns(cell)" ng-class="{'Xplayer': cell.cells=='x', 'Oplayer': cell.cells=='o'}" >
+					<!-- <div class="cells" ng-class="{mouse:hover}", ng-mouseleave="hover = false"></div> -->
 				</div>
 			</div>
 		</div>
