@@ -4,8 +4,8 @@ ticTacToeApp.controller('appControler', function ($scope) {
 
 	// var TTTFirebase = new Firebase("https://levani-ttt.firebaseIO.com");
 
-	 $scope.firebaserepeatedCells =
-		 $firebase(new Firebase("https://levani-ttt.firebaseIO.com"));
+	 // $scope.firebaserepeatedCells =
+		 // $firebase(new Firebase("https://levani-ttt.firebaseIO.com"));
 		
 
 
@@ -28,8 +28,8 @@ ticTacToeApp.controller('appControler', function ($scope) {
 		];
 
 
-		// define winning combinations after refactoring // 
-		$scope.winners = [[0,1,2],[3,4,5],[6,7,8],[0,3,6],[1,4,7],[2,5,8],[0,4,8],[2,4,6]],
+		// define winning combinations // 
+		$scope.winners = [[0,1,2],[3,4,5],[6,7,8],[0,3,6], [1,4,7],[2,5,8],[0,4,8],[2,4,6]],
 
 
 		// just a test to see if the index file is reaching the js file //
@@ -37,7 +37,7 @@ ticTacToeApp.controller('appControler', function ($scope) {
 			console.log('Correctly accessing JS function.') ;
 		};
 
-	 $scope.firebaserepeatedCells.$bind($scope, "repeatedCells");
+	 // $scope.firebaserepeatedCells.$bind($scope, "repeatedCells");
 
 	
 	// if angular has no problems and the array identifies stuff is happening to it //
