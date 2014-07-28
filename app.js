@@ -4,8 +4,8 @@ ticTacToeApp.controller('appControler', function ($scope) {
 
 	// var TTTFirebase = new Firebase("https://levani-ttt.firebaseIO.com");
 
-	// $scope.firebaserepeatedCells =
-		// $firebase(new Firebase("https://levani-ttt.firebaseIO.com" + '/firebaserepeatedCells/'));
+	 $scope.firebaserepeatedCells =
+		 $firebase(new Firebase("https://levani-ttt.firebaseIO.com"));
 		
 
 
@@ -37,7 +37,7 @@ ticTacToeApp.controller('appControler', function ($scope) {
 			console.log('Correctly accessing JS function.') ;
 		};
 
-	// $scope.firebaserepeatedCells.$bind($scope, "repeatedCells");
+	 $scope.firebaserepeatedCells.$bind($scope, "repeatedCells");
 
 	
 	// if angular has no problems and the array identifies stuff is happening to it //
